@@ -1,0 +1,32 @@
+2025-09-29 23:56:20,764 [INFO] -----------------------Starting build-----------------------
+2025-09-29 23:56:20,768 [INFO] Running configSets: _OnInstanceBoot
+2025-09-29 23:56:20,771 [INFO] Running configSet _OnInstanceBoot
+2025-09-29 23:56:20,773 [INFO] Running config AWSEBBaseConfig
+2025-09-29 23:56:20,984 [INFO] Command clearbackupfiles succeeded
+2025-09-29 23:56:20,987 [INFO] Running config AWSEBCfnHupEndpointOverride
+2025-09-29 23:56:20,991 [INFO] Command clearbackupfiles succeeded
+2025-09-29 23:56:20,992 [INFO] ConfigSets completed
+2025-09-29 23:56:20,993 [INFO] -----------------------Build complete-----------------------
+2025-09-29 23:58:56,601 [INFO] -----------------------Starting build-----------------------
+2025-09-29 23:58:56,606 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-09-29 23:58:56,608 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-09-29 23:58:56,608 [INFO] ConfigSets completed
+2025-09-29 23:58:56,608 [INFO] -----------------------Build complete-----------------------
+2025-09-29 23:58:59,121 [INFO] -----------------------Starting build-----------------------
+2025-09-29 23:58:59,126 [INFO] Running configSets: Infra-EmbeddedPostBuild
+2025-09-29 23:58:59,128 [INFO] Running configSet Infra-EmbeddedPostBuild
+2025-09-29 23:58:59,129 [INFO] ConfigSets completed
+2025-09-29 23:58:59,129 [INFO] -----------------------Build complete-----------------------
+2025-09-30 00:13:18,204 [INFO] -----------------------Starting build-----------------------
+2025-09-30 00:13:18,209 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-09-30 00:13:18,211 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-09-30 00:13:18,211 [INFO] ConfigSets completed
+2025-09-30 00:13:18,211 [INFO] -----------------------Build complete-----------------------
+2025-09-30 00:13:35,388 [INFO] -----------------------Starting build-----------------------
+2025-09-30 00:13:35,394 [INFO] Running configSets: Infra-EmbeddedPostBuild
+2025-09-30 00:13:35,397 [INFO] Running configSet Infra-EmbeddedPostBuild
+2025-09-30 00:13:35,399 [INFO] Running config postbuild_0_djangopoll
+2025-09-30 00:13:35,939 [INFO] Command 01_migrate succeeded
+2025-09-30 00:13:36,324 [INFO] Command 02_collectstatic succeeded
+2025-09-30 00:13:36,325 [INFO] ConfigSets completed
+2025-09-30 00:13:36,325 [INFO] -----------------------Build complete-----------------------

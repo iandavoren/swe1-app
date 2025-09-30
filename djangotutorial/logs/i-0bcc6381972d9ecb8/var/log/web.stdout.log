@@ -1,0 +1,744 @@
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [INFO] Listening at: http://127.0.0.1:8000 (2182)
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [INFO] Using worker: gthread
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]: [2025-09-29 23:59:00 +0000] [2214] [INFO] Booting worker with pid: 2214
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]: [2025-09-29 23:59:00 +0000] [2214] [ERROR] Exception in worker process
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]: Traceback (most recent call last):
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    worker.init_process()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    super().init_process()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    self.load_wsgi()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    self.callable = self.load()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:                    ~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    return self.load_wsgiapp()
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    return util.import_app(self.app_uri)
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    mod = importlib.import_module(module)
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:00 ip-172-31-45-41 web[2214]: [2025-09-29 23:59:00 +0000] [2214] [INFO] Worker exiting (pid: 2214)
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [ERROR] Worker (pid:2214) exited with code 3
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [ERROR] Shutting down: Master
+Sep 29 23:59:00 ip-172-31-45-41 web[2182]: [2025-09-29 23:59:00 +0000] [2182] [ERROR] Reason: Worker failed to boot.
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [INFO] Listening at: http://127.0.0.1:8000 (2235)
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [INFO] Using worker: gthread
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]: [2025-09-29 23:59:00 +0000] [2239] [INFO] Booting worker with pid: 2239
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]: [2025-09-29 23:59:00 +0000] [2239] [ERROR] Exception in worker process
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]: Traceback (most recent call last):
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    worker.init_process()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    super().init_process()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    self.load_wsgi()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    self.callable = self.load()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:                    ~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    return self.load_wsgiapp()
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    return util.import_app(self.app_uri)
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    mod = importlib.import_module(module)
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:00 ip-172-31-45-41 web[2239]: [2025-09-29 23:59:00 +0000] [2239] [INFO] Worker exiting (pid: 2239)
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [ERROR] Worker (pid:2239) exited with code 3
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [ERROR] Shutting down: Master
+Sep 29 23:59:00 ip-172-31-45-41 web[2235]: [2025-09-29 23:59:00 +0000] [2235] [ERROR] Reason: Worker failed to boot.
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [INFO] Listening at: http://127.0.0.1:8000 (2241)
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [INFO] Using worker: gthread
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]: [2025-09-29 23:59:01 +0000] [2245] [INFO] Booting worker with pid: 2245
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]: [2025-09-29 23:59:01 +0000] [2245] [ERROR] Exception in worker process
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]: Traceback (most recent call last):
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    worker.init_process()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    super().init_process()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    self.load_wsgi()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    self.callable = self.load()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:                    ~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    return self.load_wsgiapp()
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    return util.import_app(self.app_uri)
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    mod = importlib.import_module(module)
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:01 ip-172-31-45-41 web[2245]: [2025-09-29 23:59:01 +0000] [2245] [INFO] Worker exiting (pid: 2245)
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [ERROR] Worker (pid:2245) exited with code 3
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [ERROR] Shutting down: Master
+Sep 29 23:59:01 ip-172-31-45-41 web[2241]: [2025-09-29 23:59:01 +0000] [2241] [ERROR] Reason: Worker failed to boot.
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [INFO] Listening at: http://127.0.0.1:8000 (2247)
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [INFO] Using worker: gthread
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]: [2025-09-29 23:59:02 +0000] [2251] [INFO] Booting worker with pid: 2251
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]: [2025-09-29 23:59:02 +0000] [2251] [ERROR] Exception in worker process
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]: Traceback (most recent call last):
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    worker.init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    super().init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    self.load_wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    self.callable = self.load()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:                    ~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    return self.load_wsgiapp()
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    return util.import_app(self.app_uri)
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    mod = importlib.import_module(module)
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:02 ip-172-31-45-41 web[2251]: [2025-09-29 23:59:02 +0000] [2251] [INFO] Worker exiting (pid: 2251)
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [ERROR] Worker (pid:2251) exited with code 3
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [ERROR] Shutting down: Master
+Sep 29 23:59:02 ip-172-31-45-41 web[2247]: [2025-09-29 23:59:02 +0000] [2247] [ERROR] Reason: Worker failed to boot.
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [INFO] Listening at: http://127.0.0.1:8000 (2253)
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [INFO] Using worker: gthread
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]: [2025-09-29 23:59:02 +0000] [2257] [INFO] Booting worker with pid: 2257
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]: [2025-09-29 23:59:02 +0000] [2257] [ERROR] Exception in worker process
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]: Traceback (most recent call last):
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    worker.init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    super().init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    self.load_wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    self.callable = self.load()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:                    ~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    return self.load_wsgiapp()
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    return util.import_app(self.app_uri)
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    mod = importlib.import_module(module)
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:02 ip-172-31-45-41 web[2257]: [2025-09-29 23:59:02 +0000] [2257] [INFO] Worker exiting (pid: 2257)
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [ERROR] Worker (pid:2257) exited with code 3
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [ERROR] Shutting down: Master
+Sep 29 23:59:02 ip-172-31-45-41 web[2253]: [2025-09-29 23:59:02 +0000] [2253] [ERROR] Reason: Worker failed to boot.
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [INFO] Starting gunicorn 23.0.0
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [INFO] Listening at: http://127.0.0.1:8000 (2259)
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [INFO] Using worker: gthread
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]: [2025-09-29 23:59:02 +0000] [2263] [INFO] Booting worker with pid: 2263
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]: [2025-09-29 23:59:02 +0000] [2263] [ERROR] Exception in worker process
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]: Traceback (most recent call last):
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    worker.init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    super().init_process()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    self.load_wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    ~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    self.wsgi = self.app.wsgi()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:                ~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    self.callable = self.load()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:                    ~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    return self.load_wsgiapp()
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:           ~~~~~~~~~~~~~~~~~^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    return util.import_app(self.app_uri)
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    mod = importlib.import_module(module)
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]: ModuleNotFoundError: No module named 'application'
+Sep 29 23:59:02 ip-172-31-45-41 web[2263]: [2025-09-29 23:59:02 +0000] [2263] [INFO] Worker exiting (pid: 2263)
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [ERROR] Worker (pid:2263) exited with code 3
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [ERROR] Shutting down: Master
+Sep 29 23:59:02 ip-172-31-45-41 web[2259]: [2025-09-29 23:59:02 +0000] [2259] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [INFO] Listening at: http://127.0.0.1:8000 (3304)
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [INFO] Using worker: gthread
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]: [2025-09-30 00:12:11 +0000] [3320] [INFO] Booting worker with pid: 3320
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]: [2025-09-30 00:12:11 +0000] [3320] [ERROR] Exception in worker process
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]: Traceback (most recent call last):
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    worker.init_process()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    super().init_process()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    self.load_wsgi()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    self.callable = self.load()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:                    ~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    return self.load_wsgiapp()
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    return util.import_app(self.app_uri)
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    mod = importlib.import_module(module)
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:11 ip-172-31-45-41 web[3320]: [2025-09-30 00:12:11 +0000] [3320] [INFO] Worker exiting (pid: 3320)
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [ERROR] Worker (pid:3320) exited with code 3
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [ERROR] Shutting down: Master
+Sep 30 00:12:11 ip-172-31-45-41 web[3304]: [2025-09-30 00:12:11 +0000] [3304] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [INFO] Listening at: http://127.0.0.1:8000 (3351)
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [INFO] Using worker: gthread
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]: [2025-09-30 00:12:12 +0000] [3363] [INFO] Booting worker with pid: 3363
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]: [2025-09-30 00:12:12 +0000] [3363] [ERROR] Exception in worker process
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]: Traceback (most recent call last):
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    worker.init_process()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    super().init_process()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    self.load_wsgi()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    self.callable = self.load()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:                    ~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    return self.load_wsgiapp()
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    return util.import_app(self.app_uri)
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    mod = importlib.import_module(module)
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:12 ip-172-31-45-41 web[3363]: [2025-09-30 00:12:12 +0000] [3363] [INFO] Worker exiting (pid: 3363)
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [ERROR] Worker (pid:3363) exited with code 3
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [ERROR] Shutting down: Master
+Sep 30 00:12:12 ip-172-31-45-41 web[3351]: [2025-09-30 00:12:12 +0000] [3351] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [INFO] Listening at: http://127.0.0.1:8000 (3368)
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [INFO] Using worker: gthread
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]: [2025-09-30 00:12:12 +0000] [3372] [INFO] Booting worker with pid: 3372
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]: [2025-09-30 00:12:12 +0000] [3372] [ERROR] Exception in worker process
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]: Traceback (most recent call last):
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    worker.init_process()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    super().init_process()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    self.load_wsgi()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    self.callable = self.load()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:                    ~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    return self.load_wsgiapp()
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    return util.import_app(self.app_uri)
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    mod = importlib.import_module(module)
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:12 ip-172-31-45-41 web[3372]: [2025-09-30 00:12:12 +0000] [3372] [INFO] Worker exiting (pid: 3372)
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [ERROR] Worker (pid:3372) exited with code 3
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [ERROR] Shutting down: Master
+Sep 30 00:12:12 ip-172-31-45-41 web[3368]: [2025-09-30 00:12:12 +0000] [3368] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [INFO] Listening at: http://127.0.0.1:8000 (3374)
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [INFO] Using worker: gthread
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]: [2025-09-30 00:12:13 +0000] [3378] [INFO] Booting worker with pid: 3378
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]: [2025-09-30 00:12:13 +0000] [3378] [ERROR] Exception in worker process
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]: Traceback (most recent call last):
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    worker.init_process()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    super().init_process()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    self.load_wsgi()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    self.callable = self.load()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:                    ~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    return self.load_wsgiapp()
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    return util.import_app(self.app_uri)
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    mod = importlib.import_module(module)
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:13 ip-172-31-45-41 web[3378]: [2025-09-30 00:12:13 +0000] [3378] [INFO] Worker exiting (pid: 3378)
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [ERROR] Worker (pid:3378) exited with code 3
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [ERROR] Shutting down: Master
+Sep 30 00:12:13 ip-172-31-45-41 web[3374]: [2025-09-30 00:12:13 +0000] [3374] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [INFO] Listening at: http://127.0.0.1:8000 (3380)
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [INFO] Using worker: gthread
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]: [2025-09-30 00:12:13 +0000] [3384] [INFO] Booting worker with pid: 3384
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]: [2025-09-30 00:12:13 +0000] [3384] [ERROR] Exception in worker process
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]: Traceback (most recent call last):
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    worker.init_process()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    super().init_process()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    self.load_wsgi()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    self.callable = self.load()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:                    ~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    return self.load_wsgiapp()
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    return util.import_app(self.app_uri)
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    mod = importlib.import_module(module)
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:13 ip-172-31-45-41 web[3384]: [2025-09-30 00:12:13 +0000] [3384] [INFO] Worker exiting (pid: 3384)
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [ERROR] Worker (pid:3384) exited with code 3
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [ERROR] Shutting down: Master
+Sep 30 00:12:13 ip-172-31-45-41 web[3380]: [2025-09-30 00:12:13 +0000] [3380] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [INFO] Listening at: http://127.0.0.1:8000 (3386)
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [INFO] Using worker: gthread
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]: [2025-09-30 00:12:14 +0000] [3390] [INFO] Booting worker with pid: 3390
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]: [2025-09-30 00:12:14 +0000] [3390] [ERROR] Exception in worker process
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]: Traceback (most recent call last):
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    worker.init_process()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    super().init_process()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    self.load_wsgi()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    self.wsgi = self.app.wsgi()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:                ~~~~~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    self.callable = self.load()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:                    ~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    return self.load_wsgiapp()
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    return util.import_app(self.app_uri)
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    mod = importlib.import_module(module)
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]: ModuleNotFoundError: No module named 'application'
+Sep 30 00:12:14 ip-172-31-45-41 web[3390]: [2025-09-30 00:12:14 +0000] [3390] [INFO] Worker exiting (pid: 3390)
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [ERROR] Worker (pid:3390) exited with code 3
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [ERROR] Shutting down: Master
+Sep 30 00:12:14 ip-172-31-45-41 web[3386]: [2025-09-30 00:12:14 +0000] [3386] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [INFO] Listening at: http://127.0.0.1:8000 (3880)
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [INFO] Using worker: gthread
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]: [2025-09-30 00:13:38 +0000] [3888] [INFO] Booting worker with pid: 3888
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]: [2025-09-30 00:13:38 +0000] [3888] [ERROR] Exception in worker process
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]: Traceback (most recent call last):
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    worker.init_process()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    super().init_process()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    self.load_wsgi()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    self.callable = self.load()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:                    ~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    return self.load_wsgiapp()
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    return util.import_app(self.app_uri)
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    mod = importlib.import_module(module)
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:38 ip-172-31-45-41 web[3888]: [2025-09-30 00:13:38 +0000] [3888] [INFO] Worker exiting (pid: 3888)
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [ERROR] Worker (pid:3888) exited with code 3
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [ERROR] Shutting down: Master
+Sep 30 00:13:38 ip-172-31-45-41 web[3880]: [2025-09-30 00:13:38 +0000] [3880] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [INFO] Listening at: http://127.0.0.1:8000 (3924)
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [INFO] Using worker: gthread
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]: [2025-09-30 00:13:39 +0000] [3939] [INFO] Booting worker with pid: 3939
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]: [2025-09-30 00:13:39 +0000] [3939] [ERROR] Exception in worker process
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]: Traceback (most recent call last):
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    worker.init_process()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    super().init_process()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    self.load_wsgi()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    self.callable = self.load()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:                    ~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    return self.load_wsgiapp()
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    return util.import_app(self.app_uri)
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    mod = importlib.import_module(module)
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:39 ip-172-31-45-41 web[3939]: [2025-09-30 00:13:39 +0000] [3939] [INFO] Worker exiting (pid: 3939)
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [ERROR] Worker (pid:3939) exited with code 3
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [ERROR] Shutting down: Master
+Sep 30 00:13:39 ip-172-31-45-41 web[3924]: [2025-09-30 00:13:39 +0000] [3924] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [INFO] Listening at: http://127.0.0.1:8000 (3943)
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [INFO] Using worker: gthread
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]: [2025-09-30 00:13:39 +0000] [3947] [INFO] Booting worker with pid: 3947
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]: [2025-09-30 00:13:39 +0000] [3947] [ERROR] Exception in worker process
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]: Traceback (most recent call last):
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    worker.init_process()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    super().init_process()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    self.load_wsgi()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    self.callable = self.load()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:                    ~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    return self.load_wsgiapp()
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    return util.import_app(self.app_uri)
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    mod = importlib.import_module(module)
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:39 ip-172-31-45-41 web[3947]: [2025-09-30 00:13:39 +0000] [3947] [INFO] Worker exiting (pid: 3947)
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [ERROR] Worker (pid:3947) exited with code 3
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [ERROR] Shutting down: Master
+Sep 30 00:13:39 ip-172-31-45-41 web[3943]: [2025-09-30 00:13:39 +0000] [3943] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [INFO] Listening at: http://127.0.0.1:8000 (3949)
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [INFO] Using worker: gthread
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]: [2025-09-30 00:13:40 +0000] [3953] [INFO] Booting worker with pid: 3953
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]: [2025-09-30 00:13:40 +0000] [3953] [ERROR] Exception in worker process
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]: Traceback (most recent call last):
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    worker.init_process()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    super().init_process()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    self.load_wsgi()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    self.callable = self.load()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:                    ~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    return self.load_wsgiapp()
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    return util.import_app(self.app_uri)
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    mod = importlib.import_module(module)
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:40 ip-172-31-45-41 web[3953]: [2025-09-30 00:13:40 +0000] [3953] [INFO] Worker exiting (pid: 3953)
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [ERROR] Worker (pid:3953) exited with code 3
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [ERROR] Shutting down: Master
+Sep 30 00:13:40 ip-172-31-45-41 web[3949]: [2025-09-30 00:13:40 +0000] [3949] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [INFO] Listening at: http://127.0.0.1:8000 (3955)
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [INFO] Using worker: gthread
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]: [2025-09-30 00:13:40 +0000] [3959] [INFO] Booting worker with pid: 3959
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]: [2025-09-30 00:13:40 +0000] [3959] [ERROR] Exception in worker process
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]: Traceback (most recent call last):
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    worker.init_process()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    super().init_process()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    self.load_wsgi()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    self.callable = self.load()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:                    ~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    return self.load_wsgiapp()
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    return util.import_app(self.app_uri)
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    mod = importlib.import_module(module)
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:40 ip-172-31-45-41 web[3959]: [2025-09-30 00:13:40 +0000] [3959] [INFO] Worker exiting (pid: 3959)
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [ERROR] Worker (pid:3959) exited with code 3
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [ERROR] Shutting down: Master
+Sep 30 00:13:40 ip-172-31-45-41 web[3955]: [2025-09-30 00:13:40 +0000] [3955] [ERROR] Reason: Worker failed to boot.
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [INFO] Starting gunicorn 23.0.0
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [INFO] Listening at: http://127.0.0.1:8000 (3961)
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [INFO] Using worker: gthread
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]: [2025-09-30 00:13:41 +0000] [3965] [INFO] Booting worker with pid: 3965
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]: [2025-09-30 00:13:41 +0000] [3965] [ERROR] Exception in worker process
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]: Traceback (most recent call last):
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    worker.init_process()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    ~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    super().init_process()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    ~~~~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    self.load_wsgi()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    ~~~~~~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    self.wsgi = self.app.wsgi()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:                ~~~~~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    self.callable = self.load()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:                    ~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    return self.load_wsgiapp()
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:           ~~~~~~~~~~~~~~~~~^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    return util.import_app(self.app_uri)
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.13/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    mod = importlib.import_module(module)
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "/usr/lib64/python3.13/importlib/__init__.py", line 88, in import_module
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]:  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]: ModuleNotFoundError: No module named 'MY_APP/wsgi'
+Sep 30 00:13:41 ip-172-31-45-41 web[3965]: [2025-09-30 00:13:41 +0000] [3965] [INFO] Worker exiting (pid: 3965)
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [ERROR] Worker (pid:3965) exited with code 3
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [ERROR] Shutting down: Master
+Sep 30 00:13:41 ip-172-31-45-41 web[3961]: [2025-09-30 00:13:41 +0000] [3961] [ERROR] Reason: Worker failed to boot.
